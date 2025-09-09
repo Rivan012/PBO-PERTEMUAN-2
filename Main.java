@@ -1,23 +1,21 @@
-package Enkapsulasi;
+package Constructor;
 
-class Mahasiswa{
-    private String nama;
-    private int umur;
-
-    public void setDataMahasiswa(String nama, int umur){
+class constructor {
+    String nama;
+    String hobi;
+    int umur;
+    
+    constructor(String nama,String hobi,int umur){
         this.nama = nama;
+        this.hobi = hobi;
         this.umur = umur;
     }
-    public String getDataMahasiswa(){
-        return "Nama Saya "+ this.nama + " dan umur saya adalah " + this.umur ;
-    }
 }
-
 public class Main {
     public static void main(String[] args) {
-        Mahasiswa mhs1 = new Mahasiswa();
-        mhs1.setDataMahasiswa("Rivan Alfatoni", 19);
-        System.out.println(mhs1.getDataMahasiswa());
-        
+        constructor mhs1 = new constructor("Rivan Alfatoni", "Main Roblox", 19);
+        System.out.println("Nama Saya : "+ mhs1.nama);
+        System.out.println("Hobi Saya : "+ mhs1.hobi);
+        System.out.println("Umur Saya : "+ mhs1.umur + " Tahun");
     }
 }
